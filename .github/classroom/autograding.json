@@ -81,6 +81,16 @@
       "points": 10
     },
     {
+      "name": "Dummy Test",
+      "setup": "npm install",
+      "run": "file=./test/dummy.test.js npm run test --prefix ./frontend",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
       "name": "Frontend Add Student",
       "setup": "npm install",
       "run": "file=./test/student-add.test.js npm run test --prefix ./frontend",
