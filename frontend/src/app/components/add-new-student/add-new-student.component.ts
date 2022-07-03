@@ -25,16 +25,8 @@ export class AddNewStudentComponent implements OnInit {
 
 
     this.service.addStudent(student).subscribe((response)=>{
-      this.router.navigate(['addStudent'])
+      this.router.navigate(['student'])
     },(error)=>{
-      console.log('ERROR - ', error)
-    })
-  }
-
-  initializeDB(){
-    this.service.initializeDB().subscribe((response) => {
-      console.log('DB is Initialized')
-    }, (error) => {
       console.log('ERROR - ', error)
     })
   }
