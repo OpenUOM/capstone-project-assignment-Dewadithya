@@ -33,6 +33,14 @@ export class StudentTableComponent implements OnInit {
     };
     this.router.navigate(['editStudent'], navigationExtras )
   }
+  
+  initializeDB(){
+    this.service.initializeDB().subscribe((response) => {
+      console.log('DB is Initialized')
+    }, (error) => {
+      console.log('ERROR - ', error)
+    })
+  }
 
   getStudentData(){
     this.service.getStudentData().subscribe((response)=>{
@@ -43,10 +51,10 @@ export class StudentTableComponent implements OnInit {
   }
 
   deleteStudent(itemid){
-    const student = {
+    const test = {
       id: itemid
     }
-    this.service.deleteStudent(student).subscribe((response)=>{
+    this.service.deleteStudent(test).subscribe((response)=>{
       this.getStudentData()
     })
   }
