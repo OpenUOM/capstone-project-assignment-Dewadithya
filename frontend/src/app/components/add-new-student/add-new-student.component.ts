@@ -31,4 +31,12 @@ export class AddNewStudentComponent implements OnInit {
     })
   }
 
+  initializeDB(){
+    this.service.initializeDB().subscribe((response) => {
+      console.log('DB is Initialized')
+    }, (error) => {
+      console.log('ERROR - ', error)
+    })
+  }
+
 }
