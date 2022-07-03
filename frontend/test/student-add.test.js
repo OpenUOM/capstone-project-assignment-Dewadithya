@@ -2,12 +2,12 @@ import { Selector } from 'testcafe';
 process.env.NODE_ENV = "test";
 
 fixture`Testing Student UI`
-    .page`http://localhost:8080/api/addTeacher`
+    .page`http://localhost:8080/api/addStudent`
 
 test('Testing add students', async t => {
     await t.navigateTo("/api/dbinitialize");
 
-    await t.navigateTo("/api/addTeacher");
+    await t.navigateTo("/api/addStudent");
     await t.typeText("#student-id", "999999");
     await t.typeText("#student-name", "Pasindu Basnayaka");
     await t.typeText("#student-age", "45");
