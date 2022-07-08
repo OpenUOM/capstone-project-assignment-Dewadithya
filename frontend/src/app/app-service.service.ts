@@ -11,54 +11,50 @@ export class AppServiceService {
   readonly ROOT_URL;
 
   constructor(private http: HttpClient) {
-    if(environment.production == false){
-      this.ROOT_URL = 'test'
-    }else{
-      this.ROOT_URL = 'api'
-    }
+    this.ROOT_URL = 'http://localhost:8080'
   }
 
   initializeDB(){
-    return this.http.get(`/${this.ROOT_URL}/dbinitialize`)
+    return this.http.get(`/test/dbinitialize`)
   }
 
   getTeacherData(){
-    return this.http.get(`/${this.ROOT_URL}/listTeachers`)
+    return this.http.get(`/test/listTeachers`)
   }
 
   getStudentData(){
-    return this.http.get(`/${this.ROOT_URL}/listStudents`)
+    return this.http.get(`/test/listStudents`)
   }
 
   getOneStudentData(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/getStudentInfo`, payload)
+    return this.http.post(`/test/getStudentInfo`, payload)
   }
 
   getOneTeacherData(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/getTeacherInfo`, payload)
+    return this.http.post(`/test/getTeacherInfo`, payload)
   }
 
   addTeacher(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/addTeacher`, payload)
+    return this.http.post(`/test/addTeacher`, payload)
   }
 
   deleteTeacher(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/deleteTeacher`, payload)
+    return this.http.post(`/test/deleteTeacher`, payload)
   }
 
   editTeacher(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/editTeacher`, payload)
+    return this.http.post(`/test/editTeacher`, payload)
   }
 
   editStudent(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/editStudent`, payload)
+    return this.http.post(`/test/editStudent`, payload)
   }
 
   addStudent(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/addStudent`, payload)
+    return this.http.post(`/test/addStudent`, payload)
   }
 
   deleteStudent(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/deleteStudent`, payload)
+    return this.http.post(`/test/deleteStudent`, payload)
   }
 }
