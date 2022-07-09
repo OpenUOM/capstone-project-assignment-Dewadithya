@@ -15,46 +15,46 @@ export class AppServiceService {
   }
 
   initializeDB(){
-    return this.http.get(`/test/dbinitialize`)
+    return this.http.get(`/api/dbinitialize`)
   }
 
   getTeacherData(){
-    return this.http.get(`/test/listTeachers`)
+    return this.http.get(`/api/listTeachers`)
   }
 
   getStudentData(){
-    return this.http.get(`/test/listStudents`)
+    return this.http.get(`/api/listStudents`)
   }
 
   getOneStudentData(payload: Object){
-    return this.http.post(`/test/getStudentInfo`, payload)
+    return this.http.post(`/api/getStudentInfo`, payload)
   }
 
   getOneTeacherData(payload: Object){
-    return this.http.post(`/test/getTeacherInfo`, payload)
+    return this.http.post(`/api/getTeacherInfo`, payload)
   }
 
   addTeacher(payload: Object){
-    return this.http.post(`/test/addTeacher`, payload)
+    return this.http.post(`/api/addTeacher`, payload)
   }
 
   deleteTeacher(payload: Object){
-    return this.http.post(`/test/deleteTeacher`, payload)
+    return this.http.post(`/api/deleteTeacher`, payload)
   }
 
   editTeacher(payload: Object){
-    return this.http.post(`/test/editTeacher`, payload)
+    return this.http.post(`/api/editTeacher`, payload)
   }
 
   editStudent(payload: Object){
-    return this.http.post(`/test/editStudent`, payload)
+    return this.http.post(`/api/editStudent`, payload)
   }
 
   addStudent(payload: Object){
-    return this.http.post(`/test/addStudent`, payload)
+    return this.http.post(`/api/addStudent`, payload)
   }
 
   deleteStudent(payload: Object){
-    return this.http.post(`/test/deleteStudent`, payload)
+    return this.http.post(`/api/deleteStudent`, payload)
   }
 }

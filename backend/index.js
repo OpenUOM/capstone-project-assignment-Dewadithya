@@ -7,7 +7,7 @@ const server  = require ("./server.js");
 //     );
 //   });
 // }else{
-  server.listen(8080, () => {
+  server.listen(port 8080, hostname () => {
     console.log(
       "Capstone Project Backend is running on http://localhost:8080"
     );
